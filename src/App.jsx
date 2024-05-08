@@ -33,6 +33,8 @@
 // }
 import Profile from "./components/Profile";
 import userData from "./components/userData.json";
+import FriendList from "./components/FriendList";
+import friends from "./components/friends.json"
 
 
 function App(){
@@ -46,8 +48,14 @@ function App(){
  image={userData.avatar}
  status={userData.stats}
 />
-
+<FriendList 
+avatar={friends.avatar}
+name={friends.name}
+id={friends.id}
+isOnline={friends.isOnline}
+/>
     </>
   )
 }
+
 export default App
