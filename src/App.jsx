@@ -48,11 +48,7 @@ function App(){
  image={userData.avatar}
  status={userData.stats}
 />
-<FriendList 
-avatar={friends.avatar}
-name={friends.name}
-id={friends.id}
-isOnline={friends.isOnline}
+<FriendList friends={friends} 
 />
     </>
   )

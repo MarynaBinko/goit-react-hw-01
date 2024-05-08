@@ -1,12 +1,16 @@
 // import ProptTypes from "prop-types"
 
-function FriendList({avatar, id, name, isOnline}){
+function FriendList({friends}){
     return(
-<div>
-  <img src={avatar} alt={id} width="48" />
-  <p>{name}</p>
-  <p>{isOnline}</p>
+      friends.map((friend)=>{
+        return(
+        <div key="friend.id">
+  <img src={friend.avatar} alt={friend.id} width="48" />
+  <p>{friend.name}</p>
+  <p>{friend.isOnline}</p>
 </div>
+      )})
+
     )
 }
 
