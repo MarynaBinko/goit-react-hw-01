@@ -1,0 +1,55 @@
+.card{
+    border:1px solid rgb(59, 58, 58);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(92, 91, 91);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    max-width: 250px;  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card .image{
+    max-width: 60%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: rgb(50, 50, 50);
+}
+
+.card .name{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    color: rgb(9, 9, 9);
+    margin-bottom: 10px;
+}
+
+.card .tag{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: rgb(75, 69, 69);
+    margin-bottom: 5px;
+}
+
+.card .location{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: rgb(75, 69, 69);
+    margin-bottom: 10px;
+}
+
+.card .list{
+    display: flex; 
+    align-items: center;
+    list-style-type: none;   
+    padding: 0; 
+    margin: 0;
+}
+
+.card .listItem{
+    background-color: rgb(159, 161, 161);
+    border: 1px solid rgb(101, 102, 102);
+    width: calc((100% - 2px) / 3);
+}
