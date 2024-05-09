@@ -1,24 +1,28 @@
-import ProptTypes from "prop-types"
+import PropTypes from "prop-types"
+import styles from "./FriendList.module.css"
 
 function FriendList({friends}){
     return(
-      friends.map((friend)=>{
+      <ul className={styles.friendsDiv}>
+      {friends.map((friend)=>{
         return(
-        <div key="friend.id">
-  <img src={friend.avatar} alt={friend.id} width="48" />
-  <p>{friend.name}</p>
-  <p>{friend.isOnline ? "Online" : "Offline"}</p>
-</div>
-      )})
-
+        <li className={styles.friendCard} key={friend.id}>
+  <img className={styles.friendImg} src={friend.avatar} alt="Friends avatar" width="48" />
+  <p className={styles.friendName} >{friend.name}</p>
+  <p className={styles.friendStatus}>{friend.isOnline 
+  ?<p className={styles.online} >Online</p> 
+  : <p className={styles.offline}>Offline</p> }</p>
+</li>
+      )})}
+</ul>
     )
 }
 
 
 
 FriendList.PropTypes= {
-  name: ProptTypes.string,
-  isOnline: ProptTypes.bool
+  name: PropTypes.string,
+  isOnline: PropTypes.bool
 
 }
 export default FriendList
