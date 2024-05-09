@@ -1,4 +1,4 @@
-import ProptTypes from "prop-types"
+import propTypes from "prop-types"
 import styles from "./Profile.module.css"
 
 function Profile({image, name, tag, location, status: { followers, views, likes }}){
@@ -20,12 +20,12 @@ function Profile({image, name, tag, location, status: { followers, views, likes 
     )
 }
 
-Profile.ProptTypes={
-    name: ProptTypes.string,
-    location:ProptTypes.string,
-    followers:ProptTypes.number,
-    views: ProptTypes.number,
-    likes: ProptTypes.number
+Profile.propTypes={
+    name: propTypes.string,
+    location: propTypes.string,
+    followers: propTypes.number,
+    views: propTypes.number,
+    likes: propTypes.number
 }
 
 export default Profile

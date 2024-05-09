@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import propTypes from "prop-types"
 import styles from "./FriendList.module.css"
 
 function FriendList({friends}){
@@ -9,9 +9,9 @@ function FriendList({friends}){
         <li className={styles.friendCard} key={friend.id}>
   <img className={styles.friendImg} src={friend.avatar} alt="Friends avatar" width="48" />
   <p className={styles.friendName} >{friend.name}</p>
-  <p className={styles.friendStatus}>{friend.isOnline 
-  ?<p className={styles.online} >Online</p> 
-  : <p className={styles.offline}>Offline</p> }</p>
+  <div className={styles.friendStatus}>{friend.isOnline 
+  ? <p className={styles.online} >Online</p> 
+  : <p className={styles.offline}>Offline</p> }</div>
 </li>
       )})}
 </ul>
@@ -20,9 +20,8 @@ function FriendList({friends}){
 
 
 
-FriendList.PropTypes= {
-  name: PropTypes.string,
-  isOnline: PropTypes.bool
-
+FriendList.propTypes= {
+  name: propTypes.string,
+  isOnline: propTypes.bool
 }
 export default FriendList
