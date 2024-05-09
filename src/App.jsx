@@ -41,7 +41,7 @@ function App(){
 
   return(
     <>
-<Profile 
+<Profile
  name={userData.username}
  tag={userData.tag} 
  location={userData.location}
