@@ -15,6 +15,7 @@ function FriendList({friends}){
 }
 
 
+
 FriendList.PropTypes= {
   name: ProptTypes.string,
   isOnline: ProptTypes.bool
