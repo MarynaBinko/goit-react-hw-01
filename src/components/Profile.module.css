@@ -53,7 +53,14 @@
     background-color: rgb(159, 161, 161);
     border: 1px solid rgb(101, 102, 102);
     width: calc((100% - 2px) / 3);
-    padding: 5px;
-    
+    padding: 5px;  
    
 }
+
+.card .listItem:first-child{
+border-bottom-left-radius: 10px;
+}
+
+.card .listItem:last-child{
+    border-bottom-right-radius: 10px;
+    }
