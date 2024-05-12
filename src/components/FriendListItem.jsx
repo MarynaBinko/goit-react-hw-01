@@ -3,17 +3,15 @@ import styles from "./FriendListItem.module.css";
 import clsx from "clsx";
 
 const FriendListItem = ({avatar, name, isOnline }) => {
-    const className = clsx(
-        styles.friendCard, 
-        styles.friendsList
-         );
+
+    const className = clsx(isOnline ? styles.online : styles.offline);
 
   return (
-    <div className={className}>
+    <div className={styles.friendCard}>
       <img className={styles.friendImg} src={avatar} alt="Avatar" width="48" />
       <p className={styles.friendName}>{name}</p>
-      <div>{isOnline ? <p className={styles.online}>Online</p> 
-                     : <p className={styles.offline}>Offline</p>}</div>
+      <div>{isOnline ? <p className={className}>Online</p> 
+                     : <p className={className}>Offline</p>}</div>
       </div>)
 }
 
